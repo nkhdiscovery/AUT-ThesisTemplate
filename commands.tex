@@ -1,0 +1,302 @@
+% در این فایل، دستورها و تنظیمات مورد نیاز، آورده شده است.
+%-------------------------------------------------------------------------------------------------------------------
+\usepackage {indentfirst}
+\usepackage{multirow}
+% در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود
+\usepackage{amsthm,amssymb,amsmath}
+
+\usepackage{xcolor,colortbl}
+\definecolor{Gray}{gray}{0.85}
+
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+
+% بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
+\usepackage[top=35mm, bottom=37mm, left=25mm, right=30mm]{geometry}
+% بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
+\usepackage{graphicx}
+% بسته‌ای برای رسم کادر
+\usepackage{framed} 
+
+% بسته‌‌ای برای چاپ شدن خودکار تعداد صفحات در صفحه «معرفی پایان‌نامه»
+
+\usepackage{lastpage}
+% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+%\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
+\usepackage[pagebackref=false]{hyperref}
+% بسته‌ لازم برای تنظیم سربرگ‌ها
+\usepackage{fancyhdr}
+%
+\usepackage[toc,page]{appendix} %appendix
+\usepackage{setspace}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{subfigure}
+\usepackage[subfigure,titles]{tocloft}
+\cftsetindents{figure}{0em}{3.5em}
+\cftsetindents{table}{0em}{3.5em}
+
+% CONFLICT with SUBFIGURE !
+%\usepackage{subcaption}
+   %\captionsetup{textfont = sl} % use slanted font shape automatically for all captions
+%\usepackage[noabbrev]{cleveref}
+
+\usepackage{caption}
+\captionsetup[table]{labelsep=space}
+\captionsetup[figure]{labelsep=space}
+\captionsetup[table]{position=top}   %% or below
+
+
+
+
+% بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+
+
+% دستورات مربوط به ایجاد نمایه
+\usepackage{makeidx}
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{backnaur}
+
+\usepackage{longtable}
+\usepackage{titlesec}
+
+%\usepackage[Kashida=on]{xepersian}
+\usepackage{xepersian}
+
+%\settextfont[Scale=1]{XB Niloofar}
+\settextfont[Scale=0.9]{Persian Modern}
+%\settextfont[Scale=1]{HM FElmi}
+\setlatintextfont[Scale=0.9]{Latin Modern Roman}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
+\setdigitfont[Scale=0.857]{Persian Modern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
+\defpersianfont\titlefont[Scale=0.857]{B Titr}
+% \defpersianfont\iranic[Scale=1.1]{XB Zar Oblique}%Italic}%
+% \defpersianfont\nastaliq[Scale=1.2]{IranNastaliq}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستوری برای حذف کلمه «چکیده»
+\renewcommand{\abstractname}{}
+% دستوری برای حذف کلمه «abstract»
+%\renewcommand{\latinabstract}{}
+% دستوری برای تغییر نام کلمه «اثبات» به «برهان»
+\renewcommand\proofname{\textbf{برهان}}
+% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
+\renewcommand{\bibname}{\hfil  مراجع}
+%\renewcommand{\bibname}{\normalsize \begin{center} مراجع \end{center}}
+% دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+% دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
+% تعریف دستور جدید «\پ» برای خلاصه‌نویسی جهت نوشتن عبارت «پروژه/پایان‌نامه/رساله»
+\newcommand{\پ}{پروژه/پایان‌نامه/رساله }
+
+\renewcommand\appendixname{پیوست}
+
+%\newcommand\BackSlash{\char`\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\SepMark{-}
+
+% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+\newtheorem{theorem}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{proposition}[definition]{گزاره}
+\newtheorem{corollary}[definition]{نتیجه}
+\newtheorem{remark}[definition]{ملاحظه}
+\theoremstyle{definition}
+\newtheorem{example}[definition]{مثال}
+
+%\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+%\def\bibname{مراجع}
+\numberwithin{algorithm}{chapter}
+\def\listalgorithmname{فهرست الگوریتم‌ها}
+\def\listfigurename{فهرست اشکال}
+\def\listtablename{فهرست جداول}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن سربرگ صفحات
+% \newcommand{\SetHeader}{
+% \csname@twosidetrue\endcsname
+% \pagestyle{fancy}
+% \fancyhf{} 
+% \fancyhead[OL,EL]{\thepage}
+% \fancyhead[OR]{\small\rightmark}
+% \fancyhead[ER]{\small\leftmark}
+% \renewcommand{\chaptermark}[1]{%
+% \markboth{\thechapter-\ #1}{}}
+% }
+%%%%%%%%%%%%5
+%\def\MATtextbaseline{1.5}
+%\renewcommand{\baselinestretch}{\MATtextbaseline}
+\linespread{1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستوراتی برای اضافه کردن کلمه «فصل» در فهرست مطالب
+
+\newlength\mylenprt
+\newlength\mylenchp
+\newlength\mylenapp
+
+\renewcommand\cftpartpresnum{\partname~}
+\renewcommand\cftchappresnum{\chaptername~}
+\renewcommand\cftchapaftersnum{}
+
+\settowidth\mylenprt{\cftpartfont\cftpartpresnum\cftpartaftersnum}
+\settowidth\mylenchp{\cftchapfont\cftchappresnum\cftchapaftersnum}
+\settowidth\mylenapp{\cftchapfont\appendixname~\cftchapaftersnum}
+\addtolength\mylenprt{\cftpartnumwidth}
+\addtolength\mylenchp{\cftchapnumwidth}
+\addtolength\mylenapp{\cftchapnumwidth}
+
+\setlength\cftpartnumwidth{\mylenprt}
+\setlength\cftchapnumwidth{\mylenchp}	
+
+\makeatletter
+{\def\thebibliography#1{\chapter*{\refname\@mkboth
+   { \uppercase{\refname}}{ \uppercase{\refname}}}\list
+   {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}
+   \rightmargin\labelwidth
+   \advance\rightmargin\labelsep
+   \advance\rightmargin\bibindent
+   \itemindent -\bibindent
+   \listparindent \itemindent
+   \parsep \z@
+   \usecounter{enumi}}
+   \def\newblock{}
+   \sloppy
+   \sfcode`\.=1000\relax}}
+\makeatother
+
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+\makeatletter
+\newcommand{\nextverbatimspread}[1]{%
+  \def\verbatim@font{%
+    \linespread{#1}\normalfont\ttfamily% Updated definition
+    \gdef\verbatim@font{\normalfont\ttfamily}}% Revert to old definition
+}
+\makeatother
+
+%تنظیم فاصله متن تا خط زیرنویس
+\setlength{\skip\footins}{1cm}
+
+
+\usepackage{booktabs}
+
+\renewcommand{\cfttoctitlefont}{\hfil \Huge \bfseries}
+\renewcommand{\cftlottitlefont}{\hfil \Huge \bfseries}
+\renewcommand{\cftloftitlefont}{\hfil \Huge \bfseries}
+
+
+
+\graphicspath{{Figures/}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{5}
+
+\newcommand{\cchapter}[1]{\chapter[#1]{\centering #1}}
+
+\renewcommand\thefigure{\thechapter\lr{‑}\arabic{figure}}
+\renewcommand\thetable{\thechapter\lr{‑}\arabic{table}}
+\renewcommand\theequation{\thechapter\lr{‑}\arabic{equation}}
+\renewcommand\thesection{\thechapter\lr{‑}\arabic{section}}
+\renewcommand\thesubsection{\thesection\lr{‑}\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection\lr{‑}\arabic{subsubsection}}
+
+\renewcommand{\labelenumi}{\arabic{enumi}- }
+\renewcommand{\labelenumii}{\alph{enumii}- }
+\renewcommand{\labelenumiii}{\roman{enumiii}- }
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+
+
+\makeatletter
+\usepackage{patchcmd}
+%nkhComment: This is not working anymore:
+%\patchcommand{\@makecaption}{#1: #2}{#1: #2}{}{}
+\makeatother
+\usepackage{multirow}
+\pagestyle{fancy}
+
+%------------------------------
+\lhead{}
+% Length to control the \fancyheadoffset and the calculation of \headline
+% simultaneously
+\newlength\FHoffset
+\setlength\FHoffset{1cm}
+
+\addtolength\headwidth{2\FHoffset}
+
+\fancyheadoffset{\FHoffset}
+
+% these lengths will control the headrule trimming to the left and right 
+\newlength\FHleft
+\newlength\FHright
+
+% here the trimmings are controlled by the user
+\setlength\FHleft{1cm}
+\setlength\FHright{0cm}
+
+% The new definition of headrule that will take into acount the trimming(s)
+\newbox\FHline
+\setbox\FHline=\hbox{\hsize=\paperwidth%
+  \hspace*{\FHleft}%
+  \rule{\dimexpr\headwidth-\FHleft-\FHright\relax}{\headrulewidth}\hspace*{\FHright}%
+}
+\renewcommand\headrule{\vskip-0.6\baselineskip\copy\FHline}
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\lr{‑}\ #1}{}}
+%\renewcommand{\headrule}{\vbox to 0pt{\hbox to\headwidth{\dotfill}\vss}}
+%------------------------------
+%\setdigitfont{Arial}
+\newcommand*\tageq{\refstepcounter{equation}\tag{\theequation}}
+
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\usepackage{cite}
+
+%\usepackage{mathptmx}
+\usepackage[cal=cm, bb=ams, frak=esstix, scr=esstix]{mathalfa}
+
+\usepackage{tabularx}
+
+
+%تنظیم فاصله قبل و بعد فرمول‌ها 
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+\setlength{\belowdisplayskip}{6pt}
+
+\renewcommand{\contentsname}{\hspace*{\fill}فهرست مطالب\hspace*{\fill}} 
+\renewcommand{\listfigurename}{\hspace*{\fill}فهرست اشکال\hspace*{\fill}} 
+\renewcommand{\listtablename}{\hspace*{\fill}فهرست جداول\hspace*{\fill}}
+
+
+\renewcommand{\cftdotsep}{1}
+\renewcommand{\cftchapleader}{\bfseries\cftdotfill{\cftsecdotsep}}% dot leaders in bold
+\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftsecfont}{\bfseries}
+
+ \let\origaddvspace\addvspace
+ \renewcommand{\addvspace}[1]{}
+ 
+ %\let\origappendix\appendix % save the existing appendix command
+\usepackage{floatpag}
+
+\usepackage{placeins}
