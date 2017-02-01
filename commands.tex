@@ -11,7 +11,7 @@
 % فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
 
 % بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
-\usepackage[top=35mm, bottom=37mm, left=25mm, right=30mm]{geometry}
+\usepackage[top=30mm, bottom=30mm, left=25mm, right=30mm]{geometry}
 % بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
 \usepackage{graphicx}
 % بسته‌ای برای رسم کادر
@@ -68,18 +68,22 @@
 \usepackage{xepersian}
 
 %\settextfont[Scale=1]{XB Niloofar}
-\settextfont[Scale=0.9]{Persian Modern}
+%\settextfont[Scale=0.9]{Persian Modern}
+\settextfont[Scale=1.1]{B Nazanin}
 %\settextfont[Scale=1]{HM FElmi}
 \setlatintextfont[Scale=0.9]{Latin Modern Roman}
-
+\renewcommand{\labelitemi}{$\bullet$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
-\setdigitfont[Scale=0.857]{Persian Modern}
+%\setdigitfont[Scale=0.857]{Persian Modern}
+\setdigitfont[Scale=1.1]{PGaramond}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
-\defpersianfont\titlefont[Scale=0.857]{B Titr}
+%\defpersianfont\titlefont[Scale=0.857]{B Titr}
 % \defpersianfont\iranic[Scale=1.1]{XB Zar Oblique}%Italic}%
 % \defpersianfont\nastaliq[Scale=1.2]{IranNastaliq}
+\defpersianfont\nastaliq[Scale=2]{IranNastaliq}
+\defpersianfont\chapternumber[Scale=3]{B Nazanin}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % دستوری برای حذف کلمه «چکیده»
@@ -138,7 +142,7 @@
 %%%%%%%%%%%%5
 %\def\MATtextbaseline{1.5}
 %\renewcommand{\baselinestretch}{\MATtextbaseline}
-\linespread{1.9}
+\linespread{1.2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % دستوراتی برای اضافه کردن کلمه «فصل» در فهرست مطالب
 
